@@ -1,0 +1,30 @@
+<div class="background-container">
+  <h4>{{turn}}</h4>
+
+  <input type="button" value="Restart" (click)="restart()">
+  <div class="board">
+    <div *ngIf="winningLine"
+      [ngClass]="{hor1: winningLine === 'h1', hor2: winningLine === 'h2', hor3: winningLine === 'h3', ver1: winningLine === 'v1', ver2: winningLine === 'v2', ver3: winningLine === 'v3', dia1: winningLine === 'd1', dia2: winningLine === 'd2'}"
+      >
+      <div class="line"></div>
+    </div>
+    <div class="row">
+      <div (click)="fill(1)" class="box one">{{one}}</div>
+      <div (click)="fill(2)" class="box two">{{two}}</div>
+      <div (click)="fill(3)" class="box three">{{three}}</div>
+    </div>
+    <div class="row">
+      <div (click)="fill(4)" class="box four">{{four}}</div>
+      <div (click)="fill(5)" class="box five">{{five}}</div>
+      <div (click)="fill(6)" class="box six">{{six}}</div>
+    </div>
+    <div class="row">
+      <div (click)="fill(7)" class="box seven">{{seven}}</div>
+      <div (click)="fill(8)" class="box eight">{{eight}}</div>
+      <div (click)="fill(9)" class="box nine">{{nine}}</div>
+    </div>
+<!--    <div *ngIf="winner" class="winner">{{winner}} wins</div>-->
+<!--    <div>{{winningLine}}</div>-->
+  </div>
+
+</div>

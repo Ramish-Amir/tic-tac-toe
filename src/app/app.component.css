@@ -1,0 +1,151 @@
+
+.background-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: gainsboro;
+}
+
+.board {
+  position: relative;
+}
+
+.winner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: lightblue;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+
+}
+
+/*1 2 3*/
+.hor1 {
+  position: absolute;
+  margin-top: 150px;
+  width: 250px;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/*4 5 6*/
+.hor2 {
+  position: absolute;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*7 8 9*/
+.hor3 {
+  position: absolute;
+  margin-top: 150px;
+  width: 250px;
+  top: 35.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/*1 4 7*/
+.ver1 {
+  position: absolute;
+  margin-top: 155px;
+  margin-left: 5px;
+  width: 250px;
+  left: -25%;
+  transform: rotate(90deg);
+}
+
+/*2 5 8*/
+.ver2 {
+  position: absolute;
+  margin-top: 155px;
+  margin-left: 31px;
+  width: 250px;
+  /*left: 9%;*/
+  transform: rotate(90deg);
+}
+
+/*3 6 9*/
+.ver3 {
+  position: absolute;
+  margin-top: 155px;
+  margin-left: 9px;
+  width: 250px;
+  left: 40.5%;
+  transform: rotate(90deg);
+}
+
+/*1 5 9*/
+.dia1 {
+  position: absolute;
+  margin-top: 155px;
+  margin-left: 5px;
+  width: 300px;
+  transform: rotate(45deg);
+}
+
+/*3 5 7*/
+.dia2 {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 10px;
+    width: 300px;
+    transform: rotate(135deg);
+}
+
+.box {
+  border: 2px solid;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.one {
+  border-top-left-radius: 10px;
+}
+
+.three {
+  border-top-right-radius: 10px;
+}
+
+.seven {
+  border-bottom-left-radius: 10px;
+}
+
+.nine {
+  border-bottom-right-radius: 10px;
+}
+
+
+.line {
+  border: 2px solid;
+  background: black;
+  animation-name: lineAnimation;
+  animation-duration: 0.5s;
+}
+
+@keyframes lineAnimation {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 300px;
+  }
+}
